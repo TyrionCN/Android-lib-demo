@@ -1,6 +1,8 @@
-package me.tyrion.rxdemo;
+package me.tyrion.rxdemo.net;
 
+import me.tyrion.rxdemo.BuildConfig;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -9,10 +11,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiService {
 
-    public ApiDelegateService getRetrofit() {
+    public ApiDelegateService getService() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://news-at.zhihu.com/api/3/")
+                .baseUrl(BuildConfig.BASE_HTTPS_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
         return retrofit.create(ApiDelegateService.class);

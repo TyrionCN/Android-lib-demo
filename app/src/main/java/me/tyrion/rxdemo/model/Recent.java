@@ -9,7 +9,6 @@ import java.util.List;
 public class Recent {
     private List<News> recent;
 
-
     public List<News> getRecent() {
         return recent;
     }

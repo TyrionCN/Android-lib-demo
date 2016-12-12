@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_rx_menu"
+        android:title="Rx"/>
+
+    <item
+        android:id="@+id/main_retrofit_menu"
+        android:title="Retrofit"/>
+
+    <item
+        android:id="@+id/main_rxretrofit_menu"
+        android:title="RxRetrofit"/>
+
+    <item
+        android:id="@+id/main_db_menu"
+        android:title="DB"/>
+
+</menu>
